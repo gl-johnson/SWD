@@ -64,6 +64,9 @@ module SWD
   def self.http_config(&block)
     @@http_config ||= block
   end
+  def self.reset_http_config!
+    @@http_config = nil
+  end
 
   def self.url_builder
     @@url_builder ||= URI::HTTPS
